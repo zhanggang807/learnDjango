@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ title }}</title>
 </head>
 <body>
 
 {{ hello }}
-
+<p>here is some users:</p>
+<ul>
+    {% for user in all_users %}
+    <li>name:{{ user.name }}, age:{{ user.age }}</li>
+    {% endfor %}
+</ul>
 </body>
 </html>
